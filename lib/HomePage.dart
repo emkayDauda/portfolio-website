@@ -31,6 +31,10 @@ class HomePageState extends State<HomePage> {
               'I identify as a Programmer.',
               Colors.amber[800],
               size: 60,
+            ),
+            Image.asset(
+              "images/workspace.jpg",
+              semanticLabel: 'Workspace image.',
             )
           ],
         ),
