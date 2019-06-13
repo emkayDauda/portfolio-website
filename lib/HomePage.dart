@@ -11,17 +11,29 @@ class HomePage extends StatefulWidget {
 class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          _buildMenuBar(),
-          _buildTitleText(
-            'Hi there, my name is',
-            Colors.amber[800],
-          ),
-        ],
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            _buildMenuBar(),
+            _buildTitleText(
+              'Hi there, my name is',
+              Colors.amber[800],
+            ),
+            _buildTitleText(
+              'Maaruf Kehinde Dauda.',
+              Colors.black,
+              size: 60.0,
+            ),
+            _buildTitleText(
+              'I identify as a Programmer.',
+              Colors.amber[800],
+              size: 60,
+            )
+          ],
+        ),
       ),
     );
   }
@@ -62,9 +74,9 @@ class HomePageState extends State<HomePage> {
     );
   }
 
-  Widget _buildTitleText(String text, Color color, {double size = 15.0}) {
-    return Align(
-      alignment: Alignment(-0.6, 0.0),
+  Widget _buildTitleText(String text, Color color, {double size = 22.0}) {
+    return Padding(
+      padding: EdgeInsets.only(left: 500.0),
       child: Text(
         text,
         style: TextStyle(color: color, fontSize: size),
