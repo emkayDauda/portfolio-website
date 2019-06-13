@@ -1,9 +1,16 @@
 import 'package:flutter_web/material.dart';
 
+import 'HomePage.dart';
+
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
-  @override
+
+class MyApp extends StatefulWidget {
+    MyAppState createState() => MyAppState();
+}
+
+class MyAppState extends State<MyApp>{
+     @override
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -16,19 +23,3 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-   
-    return Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-            
-        ],
-    );
-  }
-}
