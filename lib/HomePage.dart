@@ -31,9 +31,15 @@ class HomePageState extends State<HomePage> {
   }
 
   Widget _buildMenuItem(String title) {
-    return Text(
-      title,
-      style: Theme.of(context).textTheme.body2,
+    return FlatButton(
+      onPressed: () {},
+      padding: EdgeInsets.all(8.0),
+      hoverColor: Colors.amber,
+      splashColor: Colors.amber,
+      child: Text(
+        title,
+        style: Theme.of(context).textTheme.body2,
+      ),
     );
   }
 }
