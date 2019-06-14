@@ -13,29 +13,35 @@ class AboutMe extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: <Widget>[
-                HomePageState().buildTitleText(
-                  'A few details about me...',
-                  Colors.white,
-                  size: 35.0,
-                )
-              ],
+            child: Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: <Widget>[
+                  HomePageState().buildTitleText(
+                    'A few details about me...',
+                    Colors.white,
+                    size: 35.0,
+                  )
+                ],
+              ),
             ),
           ),
           Expanded(
-                      child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                HomePageState().buildTitleText(
-                  'What I look like!',
-                  Colors.white,
-                  size: 25.0,
-                )
-              ],
+            child: Padding(
+              padding: const EdgeInsets.only(left: 8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  HomePageState().buildTitleText(
+                    'What I look like!',
+                    Colors.white,
+                    size: 25.0,
+                  )
+                ],
+              ),
             ),
           )
         ],
