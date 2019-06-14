@@ -39,15 +39,12 @@ class HomePageState extends State<HomePage> {
                   Colors.amber[800],
                   size: 60,
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 0.0),
-                  child: Image.asset(
-                    "images/workspace.jpg",
-                    semanticLabel: 'Workspace image.',
-                    height: 500.0,
-                    width: 500.0,
-                    alignment: Alignment.center,
-                  ),
+                Image.asset(
+                  "images/workspace.jpg",
+                  semanticLabel: 'Workspace image.',
+                  height: 500.0,
+                  width: 500.0,
+                  alignment: Alignment.center,
                 )
                        ],
                    ),
@@ -97,12 +94,9 @@ class HomePageState extends State<HomePage> {
   }
 
   Widget _buildTitleText(String text, Color color, {double size = 22.0}) {
-    return Padding(
-      padding: EdgeInsets.only(left: 0.0),
-      child: Text(
+    return Text(
         text,
         style: TextStyle(color: color, fontSize: size),
-      ),
-    );
+      );
   }
 }
