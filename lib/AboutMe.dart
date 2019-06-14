@@ -16,20 +16,8 @@ class AboutMe extends StatelessWidget {
             child: Container(),
             flex: flexSize,
           ),
-          Expanded(
-            flex: flexSize,
-            child: Padding(
-              padding: const EdgeInsets.only(right: 8.0),
-              child: _buildAboutColumn(),
-            ),
-          ),
-          Expanded(
-            flex: flexSize,
-            child: Padding(
-              padding: const EdgeInsets.only(left: 8.0),
-              child: _buildProfileColumn(),
-            ),
-          ),
+          AboutSection(),
+          ProfileSection(),
           Expanded(
             child: Container(),
             flex: flexSize,
@@ -37,6 +25,26 @@ class AboutMe extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Expanded ProfileSection() {
+    return Expanded(
+          flex: flexSize,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: _buildProfileColumn(),
+          ),
+        );
+  }
+
+  Expanded AboutSection() {
+    return Expanded(
+          flex: flexSize,
+          child: Padding(
+            padding: const EdgeInsets.only(right: 8.0),
+            child: _buildAboutColumn(),
+          ),
+        );
   }
 
   Column _buildProfileColumn() {
