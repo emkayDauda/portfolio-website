@@ -13,31 +13,49 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            _buildMenuBar(),
-            _buildTitleText(
-              'Hi there, my name is',
-              Colors.amber[800],
-            ),
-            _buildTitleText(
-              'Maaruf Kehinde Dauda.',
-              Colors.black,
-              size: 60.0,
-            ),
-            _buildTitleText(
-              'I identify as a Programmer.',
-              Colors.amber[800],
-              size: 60,
-            ),
-            Image.asset(
-              "images/workspace.jpg",
-              semanticLabel: 'Workspace image.',
-            )
-          ],
-        ),
+        // child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              _buildMenuBar(),
+             Align(
+                 alignment: Alignment(-0.1, 0),
+                            child: IntrinsicWidth(
+                   child: Column(
+                       crossAxisAlignment: CrossAxisAlignment.stretch,
+                       children: <Widget>[
+                            _buildTitleText(
+                  'Hi there, my name is',
+                  Colors.amber[800],
+                ),
+                _buildTitleText(
+                  'Maaruf Kehinde Dauda.',
+                  Colors.black,
+                  size: 60.0,
+                ),
+                _buildTitleText(
+                  'I identify as a Programmer.',
+                  Colors.amber[800],
+                  size: 60,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 0.0),
+                  child: Image.asset(
+                    "images/workspace.jpg",
+                    semanticLabel: 'Workspace image.',
+                    height: 500.0,
+                    width: 500.0,
+                    alignment: Alignment.center,
+                  ),
+                )
+                       ],
+                   ),
+               ),
+             )
+            ],
+          ),
+        // ),
       ),
     );
   }
@@ -80,7 +98,7 @@ class HomePageState extends State<HomePage> {
 
   Widget _buildTitleText(String text, Color color, {double size = 22.0}) {
     return Padding(
-      padding: EdgeInsets.only(left: 500.0),
+      padding: EdgeInsets.only(left: 0.0),
       child: Text(
         text,
         style: TextStyle(color: color, fontSize: size),
