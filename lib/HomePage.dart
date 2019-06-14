@@ -27,16 +27,16 @@ class HomePageState extends State<HomePage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
-                    _buildTitleText(
+                    buildTitleText(
                       'Hi there, my name is',
                       Colors.amber[800],
                     ),
-                    _buildTitleText(
+                    buildTitleText(
                       'Maaruf Kehinde Dauda.',
                       Colors.black,
                       size: 60.0,
                     ),
-                    _buildTitleText(
+                    buildTitleText(
                       'I identify as a Programmer.',
                       Colors.amber[800],
                       size: 60,
@@ -96,7 +96,7 @@ class HomePageState extends State<HomePage> {
     );
   }
 
-  Widget _buildTitleText(String text, Color color, {double size = 22.0}) {
+  Widget buildTitleText(String text, Color color, {double size = 22.0}) {
     return Text(
       text,
       style: TextStyle(color: color, fontSize: size),
