@@ -14,44 +14,44 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       body: Center(
         // child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              _buildMenuBar(),
-             Align(
-                 alignment: Alignment(-0.1, 0),
-                            child: IntrinsicWidth(
-                   child: Column(
-                       crossAxisAlignment: CrossAxisAlignment.stretch,
-                       children: <Widget>[
-                            _buildTitleText(
-                  'Hi there, my name is',
-                  Colors.amber[800],
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            _buildMenuBar(),
+            Align(
+              alignment: Alignment(-0.1, 0),
+              child: IntrinsicWidth(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    _buildTitleText(
+                      'Hi there, my name is',
+                      Colors.amber[800],
+                    ),
+                    _buildTitleText(
+                      'Maaruf Kehinde Dauda.',
+                      Colors.black,
+                      size: 60.0,
+                    ),
+                    _buildTitleText(
+                      'I identify as a Programmer.',
+                      Colors.amber[800],
+                      size: 60,
+                    ),
+                    Image.asset(
+                      "images/workspace.jpg",
+                      semanticLabel: 'Workspace image.',
+                      height: 500.0,
+                      width: 500.0,
+                      alignment: Alignment.center,
+                    )
+                  ],
                 ),
-                _buildTitleText(
-                  'Maaruf Kehinde Dauda.',
-                  Colors.black,
-                  size: 60.0,
-                ),
-                _buildTitleText(
-                  'I identify as a Programmer.',
-                  Colors.amber[800],
-                  size: 60,
-                ),
-                Image.asset(
-                  "images/workspace.jpg",
-                  semanticLabel: 'Workspace image.',
-                  height: 500.0,
-                  width: 500.0,
-                  alignment: Alignment.center,
-                )
-                       ],
-                   ),
-               ),
-             )
-            ],
-          ),
+              ),
+            )
+          ],
+        ),
         // ),
       ),
     );
@@ -95,8 +95,8 @@ class HomePageState extends State<HomePage> {
 
   Widget _buildTitleText(String text, Color color, {double size = 22.0}) {
     return Text(
-        text,
-        style: TextStyle(color: color, fontSize: size),
-      );
+      text,
+      style: TextStyle(color: color, fontSize: size),
+    );
   }
 }
