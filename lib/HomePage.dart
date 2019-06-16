@@ -16,44 +16,46 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       body: Center(
         // child: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            _buildMenuBar(),
-            Align(
-              alignment: Alignment(-0.1, 0),
-              child: IntrinsicWidth(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: <Widget>[
-                    buildTitleText(
-                      'Hi there, my name is',
-                      Colors.amber[800],
-                    ),
-                    buildTitleText(
-                      'Maaruf Kehinde Dauda.',
-                      Colors.black,
-                      size: 60.0,
-                    ),
-                    buildTitleText(
-                      'I identify as a Programmer.',
-                      Colors.amber[800],
-                      size: 60,
-                    ),
-                    Image.asset(
-                      "images/workspace.jpg",
-                      semanticLabel: 'Workspace image.',
-                      height: 500.0,
-                      width: 500.0,
-                      alignment: Alignment.center,
-                    )
-                  ],
+        child: SingleChildScrollView(
+                  child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              _buildMenuBar(),
+              Align(
+                alignment: Alignment(-0.1, 0),
+                child: IntrinsicWidth(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: <Widget>[
+                      buildTitleText(
+                        'Hi there, my name is',
+                        Colors.amber[800],
+                      ),
+                      buildTitleText(
+                        'Maaruf Kehinde Dauda.',
+                        Colors.black,
+                        size: 60.0,
+                      ),
+                      buildTitleText(
+                        'I identify as a Programmer.',
+                        Colors.amber[800],
+                        size: 60,
+                      ),
+                      Image.asset(
+                        "images/workspace.jpg",
+                        semanticLabel: 'Workspace image.',
+                        height: 500.0,
+                        width: 500.0,
+                        alignment: Alignment.center,
+                      )
+                    ],
+                  ),
                 ),
               ),
-            ),
-          AboutMe()
-          ],
+            AboutMe()
+            ],
+          ),
         ),
         // ),
       ),
