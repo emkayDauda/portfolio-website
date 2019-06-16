@@ -49,14 +49,20 @@ class AboutMe extends StatelessWidget {
 
   Column _buildProfileColumn() {
     return Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: <Widget>[
-                HomePageState().buildTitleText(
-                  'What I look like!',
-                  Colors.white,
-                  size: 25.0,
-                )
+                Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    HomePageState().buildTitleText(
+                      'What I look like!',
+                      Colors.white,
+                      size: 25.0,
+                    ),
+                    Image.asset('images/curve-arrow-large.png')
+                  ],
+                ),
               ],
             );
   }
