@@ -7,19 +7,22 @@ class Roles extends StatefulWidget {
 }
 
 class RolesState extends State<Roles> {
+    final _padding = Padding(padding: EdgeInsets.all(16.0),);
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
+          _padding,
           Text(
-            'Roles I take',
+            'The roles I take',
             style: TextStyle(
-              fontSize: 22.0,
+              fontSize: 40.0,
               color: Colors.black,
             ),
-          )
+          ),
+          _padding,
         ],
       ),
     );
