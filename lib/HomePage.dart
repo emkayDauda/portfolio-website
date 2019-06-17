@@ -24,7 +24,7 @@ class HomePageState extends State<HomePage> {
             children: <Widget>[
               _buildMenuBar(),
               Align(
-                alignment: Alignment(-0.1, 0),
+                alignment: Alignment(0, 0),
                 child: IntrinsicWidth(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
