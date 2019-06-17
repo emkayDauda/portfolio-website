@@ -18,7 +18,7 @@ class HomePageState extends State<HomePage> {
       body: Center(
         // child: SingleChildScrollView(
         child: SingleChildScrollView(
-                  child: Column(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -39,23 +39,27 @@ class HomePageState extends State<HomePage> {
                         size: 60.0,
                       ),
                       buildTitleText(
-                        'I identify as a Programmer.',
+                        'I identify as a Mobile Developer.',
                         Colors.amber[800],
                         size: 60,
                       ),
-                      Image.asset(
-                        "images/workspace.jpg",
-                        semanticLabel: 'Workspace image.',
-                        height: 500.0,
-                        width: 500.0,
-                        alignment: Alignment.center,
+                      ClipRRect(
+                          borderRadius: BorderRadius.circular(16.0),
+                          clipBehavior: Clip.antiAlias,
+                        child: Image.asset(
+                          "images/workspace.jpg",
+                          semanticLabel: 'Workspace image.',
+                          height: 530.0,
+                          width: 530.0,
+                          alignment: Alignment.center,
+                        ),
                       )
                     ],
                   ),
                 ),
               ),
-            AboutMe(),
-            Roles(),
+              AboutMe(),
+              Roles(),
             ],
           ),
         ),
