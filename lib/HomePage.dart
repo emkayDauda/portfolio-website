@@ -1,6 +1,7 @@
 import 'package:flutter_web/material.dart';
 
 import 'AboutMe.dart';
+import 'pages/RolesSection.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);
@@ -53,7 +54,8 @@ class HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-            AboutMe()
+            AboutMe(),
+            Roles(),
             ],
           ),
         ),
